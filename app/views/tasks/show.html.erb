@@ -1,0 +1,31 @@
+<div class="header">
+  <h1><%= @task.title %></h1>
+    <a href="<%= @task.id %>/edit">
+      <div id="button-edit">
+          <i class="fas fa-edit"></i>
+          <span>Edit Task</span>
+      </div>
+    </a>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <%= @task.details %>
+  </div>
+</div>
+<br />
+<% if @task.completed %>
+  <i class="far fa-check-square"></i>
+  <span>This task is completed</span>
+<% else %>
+  <i class="far fa-square"></i>
+  <span>This task is not completed yet</span>
+<% end %>
+<hr>
+<a href="/">
+  <div>
+    <i class="fas fa-arrow-left"></i>
+    <span>Back to list</span>
+  </div>
+</a>
+
